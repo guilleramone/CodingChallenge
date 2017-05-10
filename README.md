@@ -4,6 +4,9 @@ Bienvenido!
 
 Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a nuestro equipo. Después de múltiples procesos de selección, llegamos a la conclusión de que el código habla por si mismo. Con lo cual si te sentís dispuesto a afrontar el desafío, por favor tomate un par de horas para jugar con el problema y resolverlo.
 
+Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Envía un mail a busquedas.it@invertironline.com con el link a tu fork, y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
+
+
 ### Comenzando
 
 El repo en el cual te encontrás tiene sólo un par de cosas. Para resolver el problema y levantar la app necesitás:
@@ -19,8 +22,6 @@ Una vez hecho esto, en la carpeta `/lib` del repositorio vas a encontrar las ref
 La idea es poder levantar una aplicación web donde el punto de entrada sea un buscador de títulos de la bolsa (acciones y bonos). Este buscador debe tener autocompletado, y al seleccionar un título, me debe mostrar un detalle del mismo con sus propiedades. Con estas dos funcionalidades básicas el problema se considera solucionado (cualquier extra es bienvenido :-) ). 
 
 Para esto se provee una capa de acceso a datos mockeada con un sólo método: `GetTitulos()`.
-
-Cuando consideres que el problema está resuelto, **no** envíes pull request. Envía un mail a busquedas.it@invertironline.com con el link a tu fork, y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
 
 ### Como funciona
 

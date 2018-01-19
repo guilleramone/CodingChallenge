@@ -25,7 +25,7 @@ La idea sería poder desarrollar un formulario en donde el usuario pueda ingresa
 public static string Imprimir(List<FormaGeometrica> formas, int idioma)
 ```
 
-Al mismo tiempo, encontramos que este método es muy dependiente de las condiciones existentes, y encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas (trapecios o rectángulos por ejemplo), u obtener el reporte en otros idiomas, pero la situación actual hace que escalar sea muy dificultoso. ¿Podrías ayudarnos a refactorear la clase FormaGeometrica para que sea escalable y respete el paradigma de programación orientada a objetos?
+Al mismo tiempo, encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas (trapecios o rectángulos por ejemplo), u obtener el reporte en otros idiomas, pero escalar es muy dificultoso. ¿Nos podrías dar una mano a refactorear la clase FormaGeometrica?
 
 Acompañando al proyecto encontrarás una serie de tests unitarios que describen el comportamiento del método Imprimir. **Se puede modificar cualquier cosa del código y de los tests, con la única condición que los tests deben pasar correctamente al entregar la solución.**
 

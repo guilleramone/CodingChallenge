@@ -13,8 +13,8 @@ Abajo detallamos el problema a resolver, cuando consideres que está resuelto, *
 
 El repositorio en el cual te encontrás tiene sólo un par de cosas. Para resolver el problema y levantar la app necesitás:
   
-  * .NET Framework 4.5.2
-  * Visual Studio 2013 en adelante
+  * .NET Framework 4.6.2
+  * Visual Studio 2015 en adelante
   * Forkear este repositorio y armar un nuevo branch.
 
 ### El problema

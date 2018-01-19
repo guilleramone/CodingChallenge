@@ -9,74 +9,84 @@ namespace CodingChallenge.Data.Tests
     public class DataTests
     {
         [TestCase]
-        public void TestResumenListaVaciaTitulos()
+        public void TestResumenListaVacia()
         {
-            Assert.AreEqual("<h1>¡Lista vacía de títulos!</h1>",
-                Titulo.ImprimirResumen(new List<Titulo>(), Idioma.Castellano));
+            Assert.AreEqual("<h1>Lista vacía de formas!</h1>",
+                FormaGeometrica.Imprimir(new List<FormaGeometrica>(), 1));
         }
 
         [TestCase]
-        public void TestResumenListaVaciaTitulosEnIngles()
+        public void TestResumenListaVaciaFormasEnIngles()
         {
-            Assert.AreEqual("<h1>Empty list of securities!</h1>",
-                Titulo.ImprimirResumen(new List<Titulo>(), Idioma.Ingles));
+            Assert.AreEqual("<h1>Empty list of shapes!</h1>",
+                FormaGeometrica.Imprimir(new List<FormaGeometrica>(), 2));
         }
 
         [TestCase]
-        public void TestResumenListaConUnaAccion()
+        public void TestResumenListaConUnCuadrado()
         {
-            var acciones = new List<Titulo> { new Titulo { Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA" } };
+            var cuadrados = new List<FormaGeometrica> {new FormaGeometrica(FormaGeometrica.Cuadrado, 5)};
 
-            Assert.AreEqual("<h1>Resumen de títulos</h1>Detalle de 1 Acción<br/><span>Símbolo Acción: PRUEBA</span><br/>",
-                Titulo.ImprimirResumen(acciones, Idioma.Castellano));
+            var resumen = FormaGeometrica.Imprimir(cuadrados, FormaGeometrica.Castellano);
+
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perimetro 20 <br/>TOTAL:<br/>1 formas Perimetro 20 Area 25", resumen);
         }
 
         [TestCase]
-        public void TestResumenListaConMasAcciones()
+        public void TestResumenListaConMasCuadrados()
         {
-            var acciones = new List<Titulo>
+            var cuadrados = new List<FormaGeometrica>
             {
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA"},
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA_2"}
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 1),
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 3)
             };
 
-            Assert.AreEqual("<h1>Resumen de títulos</h1>Detalle de 2 Acciones<br/><span>Símbolo Acción: PRUEBA</span>" +
-                            "<span>Símbolo Acción: PRUEBA_2</span><br/>",
-                Titulo.ImprimirResumen(acciones, Idioma.Castellano));
+            var resumen = FormaGeometrica.Imprimir(cuadrados, FormaGeometrica.Ingles);
+
+            Assert.AreEqual("<h1>Shapes report</h1>3 Squares | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shapes Perimeter 36 Area 35", resumen);
         }
 
         [TestCase]
         public void TestResumenListaConMasTipos()
         {
-            var titulos = new List<Titulo>
+            var formas = new List<FormaGeometrica>
             {
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA"},
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA_2"},
-                new Titulo {Tipo = TipoTitulo.Bono, Simbolo = "BONO_PRUEBA"},
-                new Titulo {Tipo = TipoTitulo.Bono, Simbolo = "BONO_PRUEBA_2"}
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
+                new FormaGeometrica(FormaGeometrica.Circulo, 3),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4),
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 2),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 9),
+                new FormaGeometrica(FormaGeometrica.Circulo, 2.75m),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4.2m)
             };
 
-            Assert.AreEqual("<h1>Resumen de títulos</h1>" +
-                            "Detalle de 2 Acciones<br/><span>Símbolo Acción: PRUEBA</span><span>Símbolo Acción: PRUEBA_2</span><br/>" +
-                            "Detalle de 2 Bonos<br/><span>Símbolo Bono: BONO_PRUEBA</span><span>Símbolo Bono: BONO_PRUEBA_2</span><br/>",
-                Titulo.ImprimirResumen(titulos, Idioma.Castellano));
+            var resumen = FormaGeometrica.Imprimir(formas, FormaGeometrica.Ingles);
+
+            Assert.AreEqual(
+                "<h1>Shapes report</h1>2 Squares | Area 29 | Perimeter 28 <br/>2 Circles | Area 13,01 | Perimeter 18,06 <br/>3 Triangles | Area 49,64 | Perimeter 51,6 <br/>TOTAL:<br/>7 shapes Perimeter 97,66 Area 91,65",
+                resumen);
         }
 
         [TestCase]
-        public void TestResumenListaConMasTiposEnIngles()
+        public void TestResumenListaConMasTiposEnCastellano()
         {
-            var titulos = new List<Titulo>
+            var formas = new List<FormaGeometrica>
             {
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA"},
-                new Titulo {Tipo = TipoTitulo.Accion, Simbolo = "PRUEBA_2"},
-                new Titulo {Tipo = TipoTitulo.Bono, Simbolo = "BONO_PRUEBA"},
-                new Titulo {Tipo = TipoTitulo.Bono, Simbolo = "BONO_PRUEBA_2"}
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 5),
+                new FormaGeometrica(FormaGeometrica.Circulo, 3),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4),
+                new FormaGeometrica(FormaGeometrica.Cuadrado, 2),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 9),
+                new FormaGeometrica(FormaGeometrica.Circulo, 2.75m),
+                new FormaGeometrica(FormaGeometrica.TrianguloEquilatero, 4.2m)
             };
 
-            Assert.AreEqual("<h1>Securities report</h1>" +
-                            "Detail of 2 Stocks<br/><span>Stock Symbol: PRUEBA</span><span>Stock Symbol: PRUEBA_2</span><br/>" +
-                            "Detail of 2 Bonds<br/><span>Bond Symbol: BONO_PRUEBA</span><span>Bond Symbol: BONO_PRUEBA_2</span><br/>",
-                Titulo.ImprimirResumen(titulos, Idioma.Ingles));
+            var resumen = FormaGeometrica.Imprimir(formas, FormaGeometrica.Castellano);
+
+            Assert.AreEqual(
+                "<h1>Reporte de Formas</h1>2 Cuadrados | Area 29 | Perimetro 28 <br/>2 Círculos | Area 13,01 | Perimetro 18,06 <br/>3 Triángulos | Area 49,64 | Perimetro 51,6 <br/>TOTAL:<br/>7 formas Perimetro 97,66 Area 91,65",
+                resumen);
         }
     }
 }

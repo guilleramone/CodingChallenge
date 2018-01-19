@@ -3,16 +3,15 @@
 
 Bienvenido!
 
-Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a nuestro equipo. Después de múltiples procesos de selección, llegamos a la conclusión de que el código habla por si mismo. Con lo cual si te sentís dispuesto a afrontar el desafío, por favor tomate un par de horas para jugar con el problema y resolverlo.
+Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a nuestro equipo. Después de múltiples procesos de selección, llegamos a la conclusión de que el código habla por si mismo. Con lo cual si te sentís dispuesto a afrontar el desafío, por favor tomate un rato para jugar con el problema y resolverlo.
 
 ### Cómo participar del proceso?
 
 Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Envía un mail a busquedas.it@invertironline.com con el link a tu fork, y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
 
-
 ### Comenzando
 
-El repo en el cual te encontrás tiene sólo un par de cosas. Para resolver el problema y levantar la app necesitás:
+El repositorio en el cual te encontrás tiene sólo un par de cosas. Para resolver el problema y levantar la app necesitás:
   
   * .NET Framework 4.5.2
   * Visual Studio 2013 en adelante
@@ -20,20 +19,20 @@ El repo en el cual te encontrás tiene sólo un par de cosas. Para resolver el p
 
 ### El problema
 
-La idea es poder levantar una aplicación web, donde el punto de entrada sea un resumen de los datos a trabajar (la impresión de este resumen ya viene codificada en el método estático `public static string ImprimirResumen(IList<Titulo> titulos, Idioma idioma)`) y exista un link a un buscador de títulos de la bolsa. Este buscador debe tener autocompletado, y al seleccionar un título, me debe mostrar un detalle del mismo con sus propiedades.
+La idea sería poder desarrollar un formulario en donde el usuario pueda ingresar distintas formas geométricas, junto con la longitud del lado (o los lados), y que una vez que haya finalizado de ingresar datos el sistema prepare un reporte con el resumen de lo ingresado (en un idioma a seleccionar por el usuario), sumándole unos cálculos sobre las áreas y perímetros de estas formas. Este reporte ya está codificado en el método Imprimir(), con esta firma:
 
-Al mismo tiempo, encontramos que este método es muy dependiente de las condiciones existentes, y encontramos muy díficil el poder agregar o bien un nuevo tipo de título, o imprimir el resumen en otro idioma. ¿Podrías ayudarnos a refactorear la clase Título para que sea escalable y respete el paradigma de programación orientada a objetos?
+```csharp
+public static string Imprimir(List<FormaGeometrica> formas, int idioma)
+```
 
-### Como funciona
+Al mismo tiempo, encontramos que este método es muy dependiente de las condiciones existentes, y encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas (trapecios o rectángulos por ejemplo), u obtener el reporte en otros idiomas, pero la situación actual hace que escalar sea muy dificultoso. ¿Podrías ayudarnos a refactorear la clase FormaGeometrica para que sea escalable y respete el paradigma de programación orientada a objetos?
 
-Lo que te encontrás al levantar la .sln es un proyecto Web de .NET, con todas las referencias y packages básicos para arrancar. Tiene las referencias tanto para MVC como para WebApi, de manera que la implementación es libre. Además, tenemos una librería con la capa de acceso a datos de títulos de la bolsa, y un pequeño proyecto con test unitarios sobre el método de impresión de resumen.
+Acompañando al proyecto encontrarás una serie de tests unitarios que describen el comportamiento del método Imprimir. **Se puede modificar cualquier cosa del código y de los tests, con la única condición que los tests deben pasar correctamente al entregar la solución.**
 
-El listado de títulos se obtiene de la siguiente manera:
+### Cómo funciona
 
-  ```c#
-  var repositorio = new MockRepository().TituloRepository;
-  var titulos = repositorio.GetTitulos();
-  ```
-Una vez obtenido el listado, ¡la forma de resolver el problema es toda tuya! Crear nuevos proyectos para separar responsabilidades, instalar frameworks de JS para trabajar desde el lado de un cliente más robusto, usar sintaxis simple de Razor y el paradigma de MVC, las decisiones son múltiples. Se puede modificar cualquier cosa tanto sobre los objetos como los tests, la única condición es que los tests pasen y la app web cumpla con los objetivos mencionados más arriba.
+Lo que te encontrás al levantar la .sln es un proyecto Web de .NET, con todas las referencias y packages básicos para arrancar. Tiene las referencias tanto para MVC como para WebApi, de manera que la implementación es libre. Además, tenemos una librería con el objeto de negocio FormaGeometrica, y un pequeño proyecto con test unitarios sobre el método de impresión de reporte.
+
+La forma de resolver el problema es toda tuya! Crear nuevos proyectos para separar responsabilidades, instalar frameworks de JS para trabajar client-side, usar sintaxis simple de Razor y el paradigma de MVC, las decisiones son múltiples. 
 
 **¡¡Buena suerte!!**

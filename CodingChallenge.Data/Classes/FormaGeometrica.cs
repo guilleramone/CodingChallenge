@@ -4,7 +4,7 @@
  *
  * Se puede hacer cualquier cambio que se crea necesario tanto en el código como en los tests. La única condición es que los tests pasen OK.
  *
- * TODO: Implementar Trapecio, agregar otro idioma a reporting.
+ * TODO: Implementar Trapecio/Rectangulo, agregar otro idioma a reporting.
  * */
 
 using System;
@@ -141,8 +141,6 @@ namespace CodingChallenge.Data.Classes
 
             return string.Empty;
         }
-
-        public decimal ObtenerLado() => _lado;
 
         public decimal CalcularArea()
         {

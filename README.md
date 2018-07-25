@@ -7,32 +7,26 @@ Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a
 
 ### Cómo participar del proceso?
 
-Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Envía un mail a busquedas.it@invertironline.com con el link a tu fork, y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
-
-### Comenzando
-
-El repositorio en el cual te encontrás tiene sólo un par de cosas. Para resolver el problema y levantar la app necesitás:
-  
-  * .NET Framework 4.6.2
-  * Visual Studio 2015 en adelante
-  * Forkear este repositorio y armar un nuevo branch.
+Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Enviá un mail a busquedas.it@invertironline.com con tu resolución (sea en .zip o con un link de descarga), y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
 
 ### El problema
 
-La idea sería poder desarrollar un formulario en donde el usuario pueda ingresar distintas formas geométricas, junto con la longitud del lado (o los lados), y que una vez que haya finalizado de ingresar datos el sistema prepare un reporte con el resumen de lo ingresado (en un idioma a seleccionar por el usuario), sumándole unos cálculos sobre las áreas y perímetros de estas formas. Este reporte ya está codificado en el método Imprimir(), con esta firma:
+Tenemos un método que genera un reporte en base a una colección de formas geométricas, procesando algunos datos para presentar información extra. La firma del método es:
 
 ```csharp
 public static string Imprimir(List<FormaGeometrica> formas, int idioma)
 ```
 
-Al mismo tiempo, encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas (trapecios o rectángulos por ejemplo), u obtener el reporte en otros idiomas, pero escalar es muy dificultoso. ¿Nos podrías dar una mano a refactorear la clase FormaGeometrica?
+Al mismo tiempo, encontramos muy díficil el poder agregar o bien una nueva forma geométrica, o imprimir el reporte en otro idioma. Nos gustaría poder dar soporte para que el usuario pueda agregar otros tipos de formas u obtener el reporte en otros idiomas, pero extender la funcionalidad del código es muy doloroso. ¿Nos podrías dar una mano a refactorear la clase FormaGeometrica? Dentro del código encontrarás un TODO con nuevos requerimientos a satisfacer una vez completada la refactorización.
 
-Acompañando al proyecto encontrarás una serie de tests unitarios que describen el comportamiento del método Imprimir. **Se puede modificar cualquier cosa del código y de los tests, con la única condición que los tests deben pasar correctamente al entregar la solución.**
+Acompañando al proyecto encontrarás una serie de tests unitarios (librería NUnit) que describen el comportamiento del método Imprimir. **Se puede modificar cualquier cosa del código y de los tests, con la única condición que los tests deben pasar correctamente al entregar la solución.** 
+
+Se agradece también la inclusión de nuevos tests unitarios para validar el comportamiento de la nueva funcionalidad agregada.
 
 ### Cómo funciona
 
-Lo que te encontrás al levantar la .sln es un proyecto Web de .NET, con todas las referencias y packages básicos para arrancar. Tiene las referencias tanto para MVC como para WebApi, de manera que la implementación es libre. Además, tenemos una librería con el objeto de negocio FormaGeometrica, y un pequeño proyecto con test unitarios sobre el método de impresión de reporte.
+Lo que te encontrás al levantar la .sln es una librería con el objeto de negocio FormaGeometrica, y un pequeño proyecto con test unitarios sobre el método de impresión de reporte.
 
-La forma de resolver el problema es toda tuya! Crear nuevos proyectos para separar responsabilidades, instalar frameworks de JS para trabajar client-side, usar sintaxis simple de Razor y el paradigma de MVC, las decisiones son múltiples. 
+La resolución es libre y cómo encarar el problema queda en el criterio de quien lo resuelva!
 
 **¡¡Buena suerte!!**

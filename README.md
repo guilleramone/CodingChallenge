@@ -7,7 +7,7 @@ Nos encontramos en la búsqueda de desarrolladores .NET para que se incorporen a
 
 ### Cómo participar del proceso?
 
-Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Enviá un mail a busquedas.it@invertironline.com con tu resolución (sea en .zip o con un link de descarga), y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
+Abajo detallamos el problema a resolver, cuando consideres que está resuelto, **no** envíes pull request. Enviá un mail a busquedas.it@invertironline.com con tu resolución (con un link de descarga al repositorio de tu preferencia), y si tenés algún comentario sobre tu implementación, también podés agregarlo ahí.
 
 ### El problema
 

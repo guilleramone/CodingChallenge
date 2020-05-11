@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodingChallenge.Data.Classes.Castellano">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAACCAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\Castellano.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Circulo">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAIAAABACAAAA=</HashCode>
+      <FileName>Classes\Circulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Cuadrado">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAIAAABAAAAAA=</HashCode>
+      <FileName>Classes\Cuadrado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Idioma">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAACCAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\Idioma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Ingles">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAACCAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\Ingles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Portugues">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAACCAAAAAAAAAIAAAAAAAAAAAQ=</HashCode>
+      <FileName>Classes\Portugues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Rectangulo">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAABAAAAABAAIAAABAAAAAA=</HashCode>
+      <FileName>Classes\Rectangulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.Trapecio">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAARAIAAAAAAAAAAABAAIAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Trapecio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.TrianguloEquilatero">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAIAAABAAAAAA=</HashCode>
+      <FileName>Classes\TrianguloEquilatero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodingChallenge.Data.Classes.FormaGeometrica">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAABBAAICAAAAAAAAA=</HashCode>
+      <FileName>Classes\FormaGeometrica.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
